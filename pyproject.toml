@@ -9,25 +9,19 @@ homepage = "https://github.com/7007259Ankur/flask-ai"
 repository = "https://github.com/7007259Ankur/flask-ai"
 keywords = ["flask", "ocr", "ai"]
 
-[project]
-requires-python = ">=3.12"
-dependencies = [
-    "flask>=3.1.1,<4.0.0",
-    "pytesseract>=0.3.13,<0.4.0",
-    "pillow>=11.2.1,<12.0.0",
-    "gunicorn>=23.0.0,<24.0.0",
-    "python-dotenv>=1.0.0"  # Recommended for environment variables
-]
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-start = "gunicorn --bind 0.0.0.0:$PORT app:app"
-serve = "flask run --host=0.0.0.0 --port=$PORT"
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.1.1"
+pytesseract = "^0.3.13"
+pillow = "^11.2.1"
+gunicorn = "^23.0.0"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.1.1"
 black = "^24.4.2"
 flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
