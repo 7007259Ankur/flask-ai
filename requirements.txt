@@ -1,7 +1,0 @@
-Flask==2.3.2
-pytesseract==0.3.10
-Pillow==9.4.0
-tensorflow==2.16.1
-scikit-learn==1.4.2  # ✅ supports Python 3.12 and has prebuilt wheels
-pandas==2.0.2
-numpy==1.24.3
